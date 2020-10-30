@@ -38,5 +38,27 @@ namespace SimpleFeedReader
             app.UseStaticFiles();
             app.UseMvc();
         }
+        
+        public void MyConfigureJAP(IApplicationBuilder app, IHostingEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+            }
+
+            app.UseStaticFiles();
+            app.UseMvc();
+        }
+        
+        
+        
+        
+        
+        
+        
     }
 }
